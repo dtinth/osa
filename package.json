@@ -1,5 +1,28 @@
 {
   "dependencies": {
     "execa": "^5.1.1"
-  }
+  },
+  "name": "@dtinth/osa",
+  "version": "0.0.1",
+  "description": "Promise interface to JXA",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtinth/osa.git"
+  },
+  "keywords": [
+    "JXA",
+    "osascript",
+    "AppleScript"
+  ],
+  "author": "dtinth <dtinth@spacet.me>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dtinth/osa/issues"
+  },
+  "homepage": "https://github.com/dtinth/osa#readme"
 }
