@@ -8,6 +8,6 @@ module.exports = async function osa(fn, ...args) {
   try {
     return JSON.parse(stdout)
   } catch (e) {
-    throw new Error(`Invalid JSON: ${stdout}`)
+    throw new Error(`Invalid JSON returned from osascript: ${stdout}`)
   }
 }
