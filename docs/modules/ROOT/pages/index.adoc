@@ -1,0 +1,25 @@
+= @dtinth/osa
+
+A package to run https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/index.html[JavaScript for Automation (JXA)] code. It is a thin wrapper around https://ss64.com/osx/osascript.html[the `osascript(1)` command].
+
+== Example
+
+[source,js]
+.Example: Get the presenter notes of the current presentation in the Apple Keynote app.
+----
+import osa from '@dtinth/osa'
+
+const text = await osa(() => {
+  const app = Application('Keynote')
+  return app.documents[0].currentSlide.presenterNotes()
+})
+----
+
+== API
+
+=== `osa(code: (...args) => result, ...args) => Promise<result>`
+
+Runs the given function in a JXA session and returns the result.
+
+* The function is executed in another process, and thus cannot access the variables outside of the scope of the function.
+* Arguments passed to the function and returned results must be serializable to JSON.
